@@ -26,3 +26,8 @@ Once the page is open, the app loads the sample library automatically. You can i
 * Keyboard-friendly navigation and offline-capable storage—once loaded, the app and your data remain available without a network connection.
 
 Refer to the product specification for the broader roadmap and non-functional requirements targeted by the MVP.
+
+## Branch structure
+
+All development branches are now merged into the `main` branch. If you cloned this repository before the consolidation, make sure to `git checkout main`
+and pull the latest changes. The historical `work` branch currently points to the same tip for continuity but will no longer receive updates.
