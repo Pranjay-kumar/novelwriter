@@ -4,18 +4,17 @@ This repository contains a zero-dependency browser MVP of the Type-to-Read Novel
 
 ## Running the MVP
 
-No package installation or build step is required; everything is bundled into plain HTML, CSS, and JavaScript files. You have two easy options to launch the app:
+No package installation or build step is required; everything is bundled into plain HTML, CSS, and JavaScript files. **However, you must load the app through a local web server**—modern browsers block the module-based scripts if you double-click `index.html` and open it via the `file://` protocol.
 
-1. **Open the file directly** – double-click `index.html` (or drag it into your browser window). This works on any desktop platform and is the fastest way to try the experience.
-2. **Serve the folder locally** – if you prefer a local web address (useful for mobile testing or service worker caching), run a static file server from the repository root:
+From the repository root run:
 
-   ```bash
-   python -m http.server 3000
-   ```
+```bash
+python -m http.server 3000
+```
 
-   Then visit `http://localhost:3000/` in your browser. Any similar static server tool (e.g., `npx serve`, `ruby -run -ehttpd .`, `python -m http.server`) will work as well.
+Then visit `http://localhost:3000/` in your browser. Any similar static server tool (for example `npx serve`, `ruby -run -ehttpd .`, or `python -m http.server`) works if you prefer a different command or port.
 
-Once the page is open, the app loads the sample library automatically. You can import additional `.txt` books via **Library → Import Text**, and your progress is saved in `localStorage`, so subsequent runs will pick up where you left off—even offline.
+If you accidentally open the file directly and see a blank page, the in-page notice will remind you to start a local server. Once the page loads correctly, the app seeds the sample library automatically. You can import additional `.txt` books via **Library → Import Text**, and your progress is saved in `localStorage`, so subsequent runs will pick up where you left off—even offline.
 
 ## Feature overview
 

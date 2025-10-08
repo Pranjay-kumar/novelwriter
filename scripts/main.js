@@ -8,6 +8,10 @@ import {
 import { loadState, saveState, getDefaultState } from "./storage.js";
 
 const app = document.getElementById("app");
+const fallback = document.getElementById("app-fallback");
+if (fallback) {
+  fallback.remove();
+}
 const navButtons = Array.from(document.querySelectorAll(".nav-btn"));
 
 let state = initializeState();
