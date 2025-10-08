@@ -4,13 +4,18 @@ This repository contains a zero-dependency browser MVP of the Type-to-Read Novel
 
 ## Running the MVP
 
-No npm install is required. Open `index.html` in any modern browser (Chromium, Firefox, or Safari) or serve the folder with a lightweight static server:
+No package installation or build step is required; everything is bundled into plain HTML, CSS, and JavaScript files. You have two easy options to launch the app:
 
-```bash
-python -m http.server 3000
-```
+1. **Open the file directly** – double-click `index.html` (or drag it into your browser window). This works on any desktop platform and is the fastest way to try the experience.
+2. **Serve the folder locally** – if you prefer a local web address (useful for mobile testing or service worker caching), run a static file server from the repository root:
 
-Then browse to `http://localhost:3000/`.
+   ```bash
+   python -m http.server 3000
+   ```
+
+   Then visit `http://localhost:3000/` in your browser. Any similar static server tool (e.g., `npx serve`, `ruby -run -ehttpd .`, `python -m http.server`) will work as well.
+
+Once the page is open, the app loads the sample library automatically. You can import additional `.txt` books via **Library → Import Text**, and your progress is saved in `localStorage`, so subsequent runs will pick up where you left off—even offline.
 
 ## Feature overview
 
